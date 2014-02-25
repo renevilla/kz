@@ -22,14 +22,12 @@ var Roots = {
   // All pages
   common: {
     init: function() {
-
-
+      displayContent();
     }
   },
   // Home page
   home: {
     init: function() {
-
     }
   },
   // About us page, note the change from about-us to about_us.

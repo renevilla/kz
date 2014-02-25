@@ -54,29 +54,35 @@ section#videos{
 #nav{
    overflow: hidden;
    margin-top: 9%;
+   z-index: 13;
 }
 .nav li{
    color: #fff;
    font-size: 30px;
    line-height: 1;
-   margin-bottom: 3px;
+   margin-bottom: 5px;
 }
 .nav > li > a{
    position: relative;
    display: inline-block;
    color: #FFF;
    padding: 1px 3px 0px 3px;
+   z-index: 9999;
 }   
 
 .nav>li>a:hover, .nav>li>a:focus{
    background: rgba(40,40,40,.75);
 }
+
+
 /* ==========================================================================
    Content
    ========================================================================== */
 section#text-content{
    position: absolute;
    top: 230px;
+   width: 100%;
+   z-index: 13;
 }
 section#text-content .row{
    margin-left: 20%;
@@ -89,14 +95,51 @@ section#text-content .row{
    display: inline;
    background: rgba(40,40,40,0.75);
 }
+#stylist p{
+   color: #fff;
+   font-size: 20px;
+   line-height: 1.4;
+   display: inline;
+   background: rgba(40,40,40,0.75);
+}
+#stylist a{
+   color: #fff;
+   text-decoration: none;
+   background: rgba(9,9,9,0.75);
+   padding: 0 10px;
+}
+#stylist a:hover{
+   color: #313131;
+   text-decoration: none;
+   background: #fff;
+}
+#contact p{
+   color: #fff;
+   font-size: 20px;
+   line-height: 1.4;
+   display: inline;
+   background: rgba(40,40,40,0.75);
+}
+#contact a{
+   color: #fff;
+   text-decoration: none;
+   background: rgba(9,9,9,0.75);
+   padding: 0 10px;
+}
+#contact a:hover{
+   color: #313131;
+   text-decoration: none;
+   background: #fff;
+}
 .content-overlay{
    position: absolute;
    height: 100%;
-   width: 100;
+   width: 100%;
    top: 0;
    left: 0;
    right: 0;
-   background: rgba(34,34,34,.15)
+   background: rgba(34,34,34,.15);
+   z-index: 1;
 }
 
 
@@ -120,10 +163,18 @@ section#logo{
 /* ==========================================================================
    Miscellaneous
    ========================================================================== */
-   .title-section{
+.title-section{
    display: none;
-   }
-
+}
+.active{
+   background: rgba(40,40,40,.75);
+}
+.open{
+   display: block;
+}
+.no-sw{
+   display:none;
+}
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
