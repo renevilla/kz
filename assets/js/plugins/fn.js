@@ -30,7 +30,7 @@ function displayContent() {
     $link1.addClass('active');
     $contact.hide();
     $stylist.hide();
-    $bio.fadeIn(500);
+    $bio.fadeIn(700);
     $overlay.show();
   });
   //link2
@@ -41,7 +41,7 @@ function displayContent() {
     $link2.addClass('active');
     $bio.hide();
     $contact.hide();
-    $stylist.fadeIn(500);
+    $stylist.fadeIn(700);
     $overlay.show();
   });
   //link3
@@ -53,7 +53,7 @@ function displayContent() {
     $bio.hide();
     $stylist.hide();
     $overlay.show();
-    $contact.fadeIn(500);
+    $contact.fadeIn(700);
   });
 
 
