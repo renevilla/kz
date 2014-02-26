@@ -66,9 +66,17 @@ function displayContent() {
 function videoLoad() {
 $('#bww_hb').click(function(e){
   e.preventDefault();
+
   $("#video_overlay").show();
-  jQuery.support.cors = true;
-  $("#video_overlay").load("file:///Users/rene/Documents/projects/sites/kris%20zero/site/bww-hb.html #HomeBrewer");
+
+      $.getJSON('data.json', function (data) {
+        var output = '<ul>';
+        $.each(data, function (key, val) {
+            output += '<li>' + val.name + '</li>';
+        });
+        output += '</ul>';
+        $('#video_overlay').html(output);     // replace all existing content
+    });
 });
 }
 
