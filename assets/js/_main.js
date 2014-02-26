@@ -26,7 +26,29 @@ var Roots = {
       showVideo();
       playPause();
       videoLoad();
-      
+      videoLoad2();
+      videoLoad3();
+      videoLoad4();
+      videoLoad5();
+      videoLoad6();
+      videoLoad7();
+      videoLoad8();
+      videoLoad9();
+      videoLoad10();
+      videoLoad11();
+      videoLoad12();
+      videoLoad13();
+      videoLoad14();
+      videoLoad15();
+      videoLoad16();
+      videoLoad17();
+      videoLoad18();
+      videoLoad19();
+      videoLoad20();
+      videoLoad21();
+      videoLoad22();
+      videoLoad23();
+      videoLoad24();
       
     }
   },
