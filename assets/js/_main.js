@@ -23,6 +23,10 @@ var Roots = {
   common: {
     init: function() {
       displayContent();
+      showVideo();
+      playPause();
+      videoLoad();
+      
       
     }
   },
