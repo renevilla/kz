@@ -64,19 +64,13 @@ function displayContent() {
 /* click and load video
 * ======================================================================== */
 function videoLoad() {
-$('#bww_hb').click(function(e){
-  e.preventDefault();
+  $(function() {
 
-  $("#video_overlay").show();
-
-      $.getJSON('data.json', function (data) {
-        var output = '<ul>';
-        $.each(data, function (key, val) {
-            output += '<li>' + val.name + '</li>';
-        });
-        output += '</ul>';
-        $('#video_overlay').html(output);     // replace all existing content
-    });
-});
+    $.getJSON('data.json', function(data) {
+      var template = $('#videos').html();
+      var html = Mustache.to_html(template, data);
+      $('#kz-player').html(html);
+    }); //getJSON
+  }); //function
 }
 
