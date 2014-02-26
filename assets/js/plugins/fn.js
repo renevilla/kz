@@ -1,14 +1,3 @@
-/* click and load content
-* ======================================================================== */
-// function showContent() {
-
-//   $links.click(function () {
-//     $(this).addClass('active').removeClass('active');
-//     $(this).removeClass('active').addClass('active');
-//   })
-
-
-// }
 
 /* click and load content
 * ======================================================================== */
@@ -72,4 +61,14 @@ function displayContent() {
 }
 
 
+/* click and load video
+* ======================================================================== */
+function videoLoad() {
+$('#bww_hb').click(function(e){
+  e.preventDefault();
+  $("#video_overlay").show();
+  jQuery.support.cors = true;
+  $("#video_overlay").load("file:///Users/rene/Documents/projects/sites/kris%20zero/site/bww-hb.html #HomeBrewer");
+});
+}
 
