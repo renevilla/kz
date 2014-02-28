@@ -134,7 +134,10 @@ function videoLoad() {
 
  $("a#bww_hb").click(function(e) {
   e.preventDefault();
-    $('#kz-video').load('bww-hb.html');
+    $.get('ajax/bww_hb.html', function( data ) {
+      $('#kz-video').html( data );
+      alert('loaded');
+    });
   });
 
   //close overlay/hide content
@@ -150,12 +153,16 @@ function videoLoad() {
 function videoLoad1() {
 
  $("a#bww_w").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('bww_w.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/bww_w.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
   $('.close').click(function (e) {
+    e.preventDefault();
     e.stopPropagation();
     $('#kz-player')[0].pause();
     $('#kz-video').hide();
@@ -168,8 +175,11 @@ function videoLoad1() {
 function videoLoad2() {
 
  $("a#cars_hb").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('cars_hb.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/cars_hb.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -184,9 +194,12 @@ function videoLoad2() {
 
 function videoLoad3() {
 
- $("a#cars_ld").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('cars_ld.html');
+ $("a#cars_t").click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/cars_t.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -201,9 +214,32 @@ function videoLoad3() {
 
 function videoLoad4() {
 
+ $("a#cars_ld").click(function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/cars_ld.html', function( data ) {
+      $('#kz-video').html( data );
+    });
+  });
+
+  //close overlay/hide content
+  $('.close').click(function (e) {
+    e.stopPropagation();
+    $('#kz-player')[0].pause();
+    $('#kz-video').hide();
+    $('.close').fadeOut(800);
+    $('#video_overlay').fadeOut(800);
+  });
+}
+
+function videoLoad5() {
+
  $("a#cars_smp").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('cars_smp.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/cars_smp.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -219,8 +255,11 @@ function videoLoad4() {
 function videoLoad6() {
 
  $("a#cars_p").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('cars_p.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/cars_p.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -237,8 +276,11 @@ function videoLoad6() {
 function videoLoad7() {
 
  $("a#kmt_bas").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('kmt_bas.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/kmt_bas.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -254,8 +296,11 @@ function videoLoad7() {
 function videoLoad8() {
 
  $("a#kmt_ym").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('kmt_ym.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/kmt_ym.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -271,8 +316,11 @@ function videoLoad8() {
 function videoLoad9() {
 
  $("a#kmt_t").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('kmt_t.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/kmt_t.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -288,8 +336,11 @@ function videoLoad9() {
 function videoLoad10() {
 
  $("a#tac_h").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('tac_h.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/tac_h.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -305,8 +356,11 @@ function videoLoad10() {
 function videoLoad11() {
 
  $("a#tac_twm").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('tac_twm.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/tac_twm.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -323,8 +377,11 @@ function videoLoad11() {
 function videoLoad12() {
 
  $("a#tac_fk").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('tac_fk.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/tac_fk.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -341,8 +398,11 @@ function videoLoad12() {
 function videoLoad13() {
 
  $("a#og_f").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('og_f.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/og_f.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -359,8 +419,11 @@ function videoLoad13() {
 function videoLoad14() {
 
  $("a#og_b").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('og_b.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/og_b.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -377,8 +440,11 @@ function videoLoad14() {
 function videoLoad15() {
 
  $("a#vi_s").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('vi_s.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/vi_s.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -395,8 +461,11 @@ function videoLoad15() {
 function videoLoad16() {
 
  $("a#p1i_po").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('p1i_po.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/p1i_po.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -413,8 +482,11 @@ function videoLoad16() {
 function videoLoad17() {
 
  $("a#p1i_r").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('p1i_r.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/p1i_r.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -431,8 +503,11 @@ function videoLoad17() {
 function videoLoad18() {
 
  $("a#p1i_p").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('p1i_p.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/p1i_p.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -449,8 +524,11 @@ function videoLoad18() {
 function videoLoad19() {
 
  $("a#cc_pc").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('cc_pc.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/cc_pc.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -467,8 +545,11 @@ function videoLoad19() {
 function videoLoad20() {
 
  $("a#cc_t").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('cc_t.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/cc_t.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -484,8 +565,11 @@ function videoLoad20() {
 function videoLoad21() {
 
  $("a#ept_a").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('ept_a.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/ept_a.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -501,8 +585,11 @@ function videoLoad21() {
 function videoLoad22() {
 
  $("a#ept_e").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('ept_e.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/ept_e.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -518,8 +605,11 @@ function videoLoad22() {
 function videoLoad23() {
 
  $("a#hor_r").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('hor_r.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/hor_r.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
@@ -535,8 +625,11 @@ function videoLoad23() {
 function videoLoad24() {
 
  $("a#hor_t").click(function(e) {
-  e.preventDefault();
-    $('#kz-video').load('hor_t.html');
+    e.preventDefault();
+    e.stopPropagation();
+    $.get('ajax/hor_t.html', function( data ) {
+      $('#kz-video').html( data );
+    });
   });
 
   //close overlay/hide content
