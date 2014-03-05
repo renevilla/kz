@@ -24,7 +24,6 @@ var Roots = {
     init: function() {
       displayContent();
       showVideo();
-      videoLoad();
       playPause();
       videoLoad();
       videoLoad2();
