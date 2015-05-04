@@ -15,9 +15,7 @@
        url('@{icon-font-path}@{proxima-nova}.ttf') format('truetype'),
        url('@{icon-font-path}@{proxima-nova}.svg#@{proxima-nova-svg-id}') format('svg');
 }
-html, body{
-   height: 100%;
-}
+
 body {
    -webkit-font-smoothing: antialiased;
    text-transform: uppercase;
@@ -26,6 +24,7 @@ body {
    background-image: url('../img/kz-bg.jpg');
    background-repeat:  no-repeat;
    background-size: cover;
+   background-attachment: fixed;
 }
 h1,h2,h3,h4,h5,h6{
    font-family:  'proxima_nova_ltlight',Helvetica, Arial, sans-serif!important;
@@ -223,6 +222,18 @@ section#logo{
 .no-sw{
    display:none;
 }
+.no-m{
+   margin-left: 0!important;
+   margin-right: 0!important;
+}
+.left{
+   float: left;
+}
+.p-tb{
+   padding: 5px;
+   list-style: none;
+}
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -471,7 +482,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
 }
 @media screen and (min-width: @screen-lg-min) and (min-height: 600px) {
    #logo{
-   margin-top: 9%;
+   margin-top: 0%;
    }
    #logo2.mobile{
    display: none;
@@ -491,6 +502,11 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    }
    .movie_sec-1, .movie_sec-2, .movie_sec-3, .movie_sec-4{
    margin-bottom: 0;
+   }
+   #footer{
+     position: fixed;
+     width: 92%;
+     bottom: 0;
    }
 }
 @media screen and (min-width: @screen-lg-min) and (min-height: 800px) {
@@ -572,7 +588,7 @@ figure.alignnone { margin-left: 0; margin-right: 0; }
    display: block;
    }
    #logo{
-   margin-top: 14%;
+   margin-top: 0%;
    }
    #nav{
    margin-top: 17%;
